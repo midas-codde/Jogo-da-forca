@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor1:#39a4fc;
+    --cor2:#018cfd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Maven Pro', sans-serif;
+}
+
+body {
+    background-color: #0c0c0c;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.container {
+    width: 90%;
+    height: 90%;
+}
+
+.lose-circle-left,
+.lose-circle-right {
+    z-index: -2;
+    position: absolute;
+    background-color: var(--cor1);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    -webkit-box-shadow: 0px 4px 231px 58px var(--cor1);
+    -moz-box-shadow: 0px 4px 231px 58px var(--cor1);
+    box-shadow: 0px 4px 231px 58px rvar(--cor1);
+    animation: pisc 1s ease;
+    opacity: 0;
+}
+
+@keyframes pisc {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.lose-circle-left {
+    left: -300px;
+    bottom: -400px;
+}
+
+.lose-circle-right {
+    right: -300px;
+    bottom: -400px;
+}
+
+/* FORCA */
+
+.force {
+    width: 100%;
+    height: 25%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.force-itens {
+    height: 100%;
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.force-itens #head {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: solid white 5px;
+    box-shadow: 0px 0px 8px white;
+}
+
+.force-itens #body {
+    background-color: white;
+    box-shadow: 0px 0px 8px white;
+    width: 6px;
+    height: 80px;
+    position: absolute;
+    top: 70px;
+}
+
+.force-itens #hand-left {
+    background-color: white;
+    box-shadow: 0px 0px 8px white;
+    width: 6px;
+    height: 50px;
+    top: 70px;
+    left: 130px;
+    position: absolute;
+    rotate: 40deg;   
+}
+
+.force-itens #hand-right {
+    background-color: white;
+    box-shadow: 0px 0px 8px white;
+    width: 6px;
+    height: 50px;
+    top: 70px;
+    right: 130px;
+    position: absolute;
+    rotate: -40deg;
+}
+
+.force-itens #leg-left {
+    background-color: white;
+    box-shadow: 0px 0px 8px white;
+    width: 6px;
+    height: 50px;
+    top: 145px;
+    left: 138px;
+    position: absolute;
+    rotate: -160deg;
+}
+
+.force-itens #leg-right {
+    background-color: white;
+    box-shadow: 0px 0px 8px white;
+    width: 6px;
+    height: 50px;
+    top: 145px;
+    right: 138px;
+    position: absolute;
+    rotate: 160deg;
+}
+
+/* PALAVRA SECRETA */
+
+#secret-word {
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 10px;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+.letter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    color: #fff;
+    font-size: 50px;
+    border-bottom: 3px solid var(--cor2);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.letter::after {
+    content: "";
+    background-color: var(--cor2);
+    translate: 0 5px;
+    box-shadow: 0px -1px 15px 1.5px var(--cor2);
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.letter-spacing {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    color: #fff;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* TECLADO */
+
+.keyboard {
+    width: 100%;
+    height: 40%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.colunm {
+    display: flex;
+    flex-direction: column;
+}
+
+.keys {
+    display: flex;
+    flex-direction: row;
+}
+
+.keys div {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    position: relative;
+    transition: 0.3s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--cor2) 0.2em solid;
+    box-shadow:
+     0 0 1em var(--cor1),
+     inset 0 0 1em var(--cor1);
+}
+
+.keys div::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cor2);
+    box-shadow:
+     0 0 2em var(--cor1);
+     opacity: 0;
+     transition: opacity 100ms linear;
+}
+
+.keys div:hover::after {
+    opacity: 1;
+}
+
+.keys div p:hover, .keys div p:active {
+    color: #fff;
+}
+
+.keys div:hover {
+    transform: translateY(-7px);
+    cursor: pointer;
+}
+
+.active, .active p {
+    background-color: var(--cor2);
+    color: #fff !important;
+}
+
+.keys div p {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--cor1);
+    text-shadow:
+    0 0 .20em #fff7,
+    0 0 .30em var(--cor2);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.keys:nth-child(3) {
+    margin-left: 90px;
+}
+
+/* CATEGORIAS */
+
+#tecla-btnReiniciar p {
+  font-size: 20px;
+}
+
+#categories {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+.color {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    color: var(--cor1);
+}
+
+.color span {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--cor2) 0.2em solid;
+    box-shadow:
+     0 0 1em var(--cor1),
+     inset 0 0 1em var(--cor1);
+    width: 50px;
+    height: 50px;
+    transition: 0.1s;
+}
+
+.color span:hover {
+    cursor: pointer;
+    background-color: var(--cor1);
+    color: #fff;
+}
+
+/* TELA DE DERROTA */
+
+.loser {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #161616ea;
+    display: none;
+    align-items: center;
+    z-index: 4;
+    justify-content: center;
+}
+
+.loser.show {
+    display: flex;
+}
+
+.loser-screen {
+    height: 300px;
+    width: 600px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 1, 1, 0.171);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.loser-screen h1,h2 {
+    color: #fff;
+    font-weight: 200;
+}
+
+#loser-word {
+    text-align: center;
+    margin: 15px auto;
+    width: 90%;
+    height: 30%;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.loser-btn {
+    border-radius: 5px;
+    width: 200px;
+    height: 75px;
+    background: rgba(255, 1, 1, 0.171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.loser-btn:hover {
+    background: rgba(255, 1, 1, 0.521);
+    transition: all 0.3s;
+}
+
+/* TELA DE VITORIA */
+
+.win {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #161616ea;
+    z-index: 4;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.win.show {
+    display: flex;
+}
+
+.win-screen {
+    height: 300px;
+    width: 600px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(1, 255, 65, 0.171);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.win-screen h1,h2 {
+    color: #fff;
+    font-weight: 200;
+}
+
+#win-word {
+    text-align: center;
+    margin: 15px auto;
+    width: 90%;
+    height: 30%;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+.win-btn {
+    border-radius: 5px;
+    width: 200px;
+    height: 75px;
+    background-color: rgba(1, 255, 65, 0.171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.win-btn:hover {
+    background-color: rgba(1, 255, 65, 0.514);
+    transition: all 0.3s;
+}
+
+.select-colors {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    width: 150px;
+    padding: 10px 6px;
+}
+
+.select-colors {
+    background-color: blue;
+}
+
+/* MEDIAS */
+
+@media (max-width: 900px) {
+    .keys div {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        position: relative;
+        transition: 0.3s;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #secret-word {
+        width: 100%;
+        height: 10%;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+    }
+}

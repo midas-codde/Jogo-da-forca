@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JOGO DA FORCA</title>
+</head>
+<body>
+     <div class="loser">
+        <div class="loser-screen">
+            <h1>Você perdeu!</h1>
+            <h2>a palavra era</h2>
+            <span id="loser-word"></span>
+            <div onclick="location.reload()" class="loser-btn">Recomeçar</div>
+        </div>
+    </div>
+    <div class="win">
+        <div class="win-screen">
+            <h1>Você ganhou!</h1>
+            <h2>a palavra era</h2>
+            <span id="win-word"></span>
+            <div onclick="location.reload()" class="win-btn">Recomeçar</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="force">
+            <div class="force-itens">
+                <!-- <div id="head"></div>
+                <div id="body"></div>
+                <div id="hand-left"></div>
+                <div id="hand-right"></div>
+                <div id="leg-left"></div>
+                <div id="leg-right"></div> -->
+            </div>
+        </div>
+        <div id="secret-word"></div>
+        <div class="keyboard">
+            <div class="colunm">
+                <div class="keys">
+                    <div id="tecla-Q"onclick="verificaLetraEscolhida('Q')"><span></span><p>Q</p></div>
+                    <div id="tecla-W" onclick="verificaLetraEscolhida('W')"><span></span><p>W</p></div>
+                    <div id="tecla-E" onclick="verificaLetraEscolhida('E')"><span></span><p>E</p></div>
+                    <div id="tecla-R" onclick="verificaLetraEscolhida('R')"><span></span><p>R</p></div>
+                    <div id="tecla-T" onclick="verificaLetraEscolhida('T')"><span></span><p>T</p></div>
+                    <div id="tecla-Y" onclick="verificaLetraEscolhida('Y')"><span></span><p>Y</p></div>
+                    <div id="tecla-U" onclick="verificaLetraEscolhida('U')"><span></span><p>U</p></div>
+                    <div id="tecla-I" onclick="verificaLetraEscolhida('I')"><span></span><p>I</p></div>
+                    <div id="tecla-O" onclick="verificaLetraEscolhida('O')"><span></span><p>O</p></div>
+                    <div id="tecla-P" onclick="verificaLetraEscolhida('P')"><span></span><p>P</p></div>
+                </div>
+                <div class="keys">
+                    <div id="tecla-A" onclick="verificaLetraEscolhida('A')"><span></span><p>A</p></div>
+                    <div id="tecla-S" onclick="verificaLetraEscolhida('S')"><span></span><p>S</p></div>
+                    <div id="tecla-D" onclick="verificaLetraEscolhida('D')"><span></span><p>D</p></div>
+                    <div id="tecla-F" onclick="verificaLetraEscolhida('F')"><span></span><p>F</p></div>
+                    <div id="tecla-G" onclick="verificaLetraEscolhida('G')"><span></span><p>G</p></div>
+                    <div id="tecla-H" onclick="verificaLetraEscolhida('H')"><span></span><p>H</p></div>
+                    <div id="tecla-J" onclick="verificaLetraEscolhida('J')"><span></span><p>J</p></div>
+                    <div id="tecla-K" onclick="verificaLetraEscolhida('K')"><span></span><p>K</p></div>
+                    <div id="tecla-L" onclick="verificaLetraEscolhida('L')"><span></span><p>L</p></div>
+                    <div id="tecla-Ç" onclick="verificaLetraEscolhida('Ç')"><span></span><p>Ç</p></div>
+                </div>
+                <div class="keys">
+                    <div id="tecla-Z"onclick="verificaLetraEscolhida('Z')"><span></span><p>Z</p></div>
+                    <div id="tecla-X"onclick="verificaLetraEscolhida('X')"><span></span><p>X</p></div>
+                    <div id="tecla-C"onclick="verificaLetraEscolhida('C')"><span></span><p>C</p></div>
+                    <div id="tecla-V"onclick="verificaLetraEscolhida('V')"><span></span><p>V</p></div>
+                    <div id="tecla-B"onclick="verificaLetraEscolhida('B')"><span></span><p>B</p></div>
+                    <div id="tecla-N"onclick="verificaLetraEscolhida('N')"><span></span><p>N</p></div>
+                    <div id="tecla-M"onclick="verificaLetraEscolhida('M')"><span></span><p>M</p></div>
+                    <div onclick="location.reload()" id="tecla-btnReiniciar"><span></span><p>RESET</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="categories">
+        </div>
+        <div class="color"><span onclick="resetColor()">?</span></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
+

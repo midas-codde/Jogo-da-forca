@@ -1,0 +1,122 @@
+[
+  {
+      "nome" : "QUARTO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "SALÃO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "REFEITORIO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "BIBLIOTECA",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "ESTACIONAMENTO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "COZINHA",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "BANHEIRO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "FAVELA",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "INDONESIA",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "PREDIO",
+      "categoria" : "LUGAR"
+  },
+  {
+      "nome" : "TRIPE",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "CADEIRA",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "CHUVEIRO",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "TECLADO",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "GAVETA",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "JARRA",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "DESPERTADOR",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "DARDO",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "NAVALHA",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "MAÇANETA",
+      "categoria" : "OBJETO"
+  },
+  {
+      "nome" : "GORILA",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "LEOPARDO",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "CAGADO",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "BAIACU",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "RATO",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "OVELHA",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "AXOLOTE",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "ZEBRA",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "CORVO",
+      "categoria" : "ANIMAL"
+  },
+  {
+      "nome" : "LEMURE",
+      "categoria" : "ANIMAL"
+  }
+]
